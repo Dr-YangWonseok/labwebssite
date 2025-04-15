@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="ja">
+<html lang="En">
+  <head>
+    <meta charset="UTF-8">
+    <title>Yang Lab .</title>
+    <meta name="description" content="感性インタラクション研究室を紹介">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="./java/jquery-3.6.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asset&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider.css">
+
+
+    <link rel="stylesheet" href='./css/style.css'>
+  </head>
+  <body>
+
+    <script>
+      jQuery(window).scroll(function() {
+    	let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+    	let areaTop = jQuery("#home").offset().top - 10; // 対象エリアの上部の位置
+    	let areaBottom = areaTop + jQuery("#home").innerHeight(); // 対象エリアの下部の位置
+
+    	if (scrollTop > areaTop && scrollTop < areaBottom) {
+    		jQuery("body").addClass("is-in-h"); // スクロールが対象エリアに入った場合
+    	} else {
+    		jQuery("body").removeClass("is-in-h"); // スクロールが対象エリアから出ている場合
+    	}
+      });
+      jQuery(window).ready(function() {
+      let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+      let areaTop = jQuery("#home").offset().top - 10; // 対象エリアの上部の位置
+      let areaBottom = areaTop + jQuery("#home").innerHeight(); // 対象エリアの下部の位置
+
+      if (scrollTop > areaTop && scrollTop < areaBottom) {
+        jQuery("body").addClass("is-in-h"); // スクロールが対象エリアに入った場合
+      } else {
+        jQuery("body").removeClass("is-in-h"); // スクロールが対象エリアから出ている場合
+      }
+      });
+      jQuery(window).scroll(function() {
+      let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+      let areaTop = jQuery("#news").offset().top - 10; // 対象エリアの上部の位置
+      let areaBottom = areaTop + jQuery("#news").innerHeight(); // 対象エリアの下部の位置
+
+      if (scrollTop > areaTop && scrollTop < areaBottom) {
+        jQuery("body").addClass("is-in-n"); // スクロールが対象エリアに入った場合
+      } else {
+        jQuery("body").removeClass("is-in-n"); // スクロールが対象エリアから出ている場合
+      }
+      });
+      jQuery(window).scroll(function() {
+      let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+      let areaTop = jQuery("#profile").offset().top - 10; // 対象エリアの上部の位置
+      let areaBottom = areaTop + jQuery("#profile").innerHeight(); // 対象エリアの下部の位置
+
+      if (scrollTop > areaTop && scrollTop < areaBottom) {
+        jQuery("body").addClass("is-in-p"); // スクロールが対象エリアに入った場合
+      } else {
+        jQuery("body").removeClass("is-in-p"); // スクロールが対象エリアから出ている場合
+      }
+      });
+      jQuery(window).scroll(function() {
+      let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+      let areaTop = jQuery("#member").offset().top - 10; // 対象エリアの上部の位置
+      let areaBottom = areaTop + jQuery("#member").innerHeight(); // 対象エリアの下部の位置
+
+      if (scrollTop > areaTop && scrollTop < areaBottom) {
+        jQuery("body").addClass("is-in-m"); // スクロールが対象エリアに入った場合
+      } else {
+        jQuery("body").removeClass("is-in-m"); // スクロールが対象エリアから出ている場合
+      }
+      });
+      jQuery(window).scroll(function() {
+      let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+      let areaTop = jQuery("#career").offset().top - 10; // 対象エリアの上部の位置
+      let areaBottom = areaTop + jQuery("#career").innerHeight(); // 対象エリアの下部の位置
+
+      if (scrollTop > areaTop && scrollTop < areaBottom) {
+        jQuery("body").addClass("is-in-c"); // スクロールが対象エリアに入った場合
+      } else {
+        jQuery("body").removeClass("is-in-c"); // スクロールが対象エリアから出ている場合
+      }
+      });
+      jQuery(window).scroll(function() {
+      let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+      let areaTop = jQuery("#dataroom").offset().top - 10; // 対象エリアの上部の位置
+      let areaBottom = areaTop + jQuery("#dataroom").innerHeight(); // 対象エリアの下部の位置
+
+      if (scrollTop > areaTop && scrollTop < areaBottom) {
+        jQuery("body").addClass("is-in-d"); // スクロールが対象エリアに入った場合
+      } else {
+        jQuery("body").removeClass("is-in-d"); // スクロールが対象エリアから出ている場合
+      }
+      });
+
+      $(function() {
+        $('#nav-content li a').on('click', function(event) {
+        $('#nav-input').prop('checked', false);
+      });
+      });
+
+      $(function () {
+        $('a[href^="#"]').click(function () {
+          var href = $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          　　 var speed = 500;
+          $("html, body").animate({
+            scrollTop: position
+          }, speed, "swing");
+          return false;
+        });
+        });
+    </script>
+
+    <nav class="menu-desktop">
+        <div class="menu-desktop-inner">
+        <div class="box"></div>
+        <ul id="menu-desktop-list">
+          <li class="menu-desktop-list-item1"><a href="#home">Home</a></li>
+          <li class="menu-desktop-list-item7"><a href="#news">News</a></li>
+          <li class="menu-desktop-list-item2"><a href="#profile">Profile</a></li>
+          <li class="menu-desktop-list-item3"><a href="#member">Member</a></li>
+          <li class="menu-desktop-list-item4"><a href="#career">Career</a></li>
+          <li class="menu-desktop-list-item5"><a href="#dataroom">Dataroom</a></li>
+        </ul>
+      </div>
+      <div class="barger">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#member">Member</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#dataroom">Dataroom</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="home" class="big-bg">
+      <header class="header">
+        <div class="container">
+        <div class="logo"><h10><a href="index.html"><span>Kansei</span>Interaction Design Lab .</a></h10>
+        </div>
+        </div>
+      </header>
+      <div class="home-contents">
+
+      </div>
+      <a href="https://www.youtube.com/watch?v=XWcfmQU5C2Y&list=LL&index=2" target="_blank" rel="noopener noreferrer"><img class="video-button" src="./img/Video.png"></a>
+    </div>
+
+    <div class="area" id="news">
+
+      <h3 class="news-title">News</h3>
+            <div class="grid">
+
+              <div class="item">
+                <img src="./img/activities/2024eu.png" alt="2024eu" />
+                <p class="date">2024.07.23~08.01</p>
+                <h4 class="activities_title">AHFE in Nice</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/2024usa.png" alt="2024usa" />
+                <p class="date">2024.07.13~07.22</p>
+                <h4 class="activities_title">gPBL in USA</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/2024mid.png" alt="2024mid" />
+                <p class="date">2024.07.06</p>
+                <h4 class="activities_title">卒業論文中間発表</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/2024seoul.png" alt="2024seoul" />
+                <p class="date">2023.05.23~06.03</p>
+                <h4 class="activities_title">gPBL in South Korea</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/2024homep.png" alt="2024homep" />
+                <p class="date">2024.5.01</p>
+                <h4 class="activities_title">ホームパーティ</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/HCII2023.jpg" alt="HCII2023" />
+                <p class="date">2023.7.27</p>
+                <h4 class="activities_title">HCII in Copenhagen</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/KRPBL2023.jpg" alt="KRPBL2023" />
+                <p class="date">2023.06.25~07.05</p>
+                <h4 class="activities_title">gPBL in South Korea</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/sotugyo.jpg" alt="sotugyousiki" />
+                <p class="date">2023.3.22</p>
+                <h4 class="activities_title">卒業式</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/soturon.jpg" alt="soturon" />
+                <p class="date">2023.01.26~01.27</p>
+                <h4 class="activities_title">卒業論文最終発表会</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/tai.jpg" alt="gPBL in Phuket" />
+                <p class="date">2022.10.29~11.08</p>
+                <h4 class="activities_title">gPBL in Phuket</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/bbq.jpg" alt="BBQ in Toyosu" />
+                <p class="date">2022.10.05</p>
+                <h4 class="activities_title">BBQ in Toyosu</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/sinsa.jpg" alt="tyukansinsa" />
+                <p class="date">2022.10.01</p>
+                <h4 class="activities_title">卒業論文中間審査</h4>
+                </div>
+
+              <div class="item">
+                <img src="./img/activities/eu.jpg" alt="gPBL in Europa" />
+                <p class="date">2022.09.04~15</p>
+                <h4 class="activities_title">学会 in Europa</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/kankoku.jpg" alt="gPBL in Seoul" />
+                <p class="date">2022.08.18~26</p>
+                <h4 class="activities_title">gPBL in Seoul</h4>
+              </div>
+
+              <div class="item">
+                <img src="./img/activities/0709.jpg" alt="tyukanhappyou" />
+                <p class="date">2022.07.09</p>
+                <h4 class="activities_title">卒業論文中間発表</h4>
+              </div>
+          </div>
+    </div>
+
+    <div class="area" id="profile">
+      <div class="profile-contents">
+        <div class="title-p">
+        <h3 class="profile-title">Profile</h3>
+        </div>
+        <div class="subtitle-p">
+          <div class="subtitle-p2">
+            <h3>粱 元碩 ( Yang Wonseok )  教授</h3>
+          </div>
+          <div class="subtitle-p3">
+            <a href="https://researchmap.jp/shibaura_yang">
+              <h3>リサーチマップ</h3>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <ul class="accordion-area">
+      <li>
+          <section>
+            <h3 class="title1">Main Infomation</h3>
+            <div class="box1">
+              <div class="yang_image">
+                <img src="./img/yang.jpeg">
+              </div>
+            <li><p>人間が製品、サービス、システムを使用する場合、良い経験をできるように、物理的、感性的観点で眺めて、ユーザと製品間の相互作用(インタラクション)に関して理解が必要です。それに基づいて最適なインタラクションの設計を行い、プロトタイプおよび使用性評価によって使いやすくて便利で魅力的な感性インタラクションをデザインする方法について研究しています。<br><br><t7><span style="font-weight:bold; line-height:4rem;">｢ 研究キーワード ｣</span></t7><br>1. 感性デザイン：人間感性の特徴解明（調査・測定・分析）によるデザイン計画及び活用<br>2. ユニバーサルデザイン：社会的に弱者のためのデザイン（高齢者、児童、障害者支援）<br>3. 情報共有システム：安全・安心できる社会のための情報共有システム<br>4. デザインマネージメント：企業のアイデンティティ設立から広報方法として情報デザインの役割<br>5. ウェブサービス、アプリ、2d・3dデザイン・コンテンツ、携帯電話・電子機器のUI/UX、インタラクションデザイン（様々なセンサーを利用した体感型デバイスやコンテンツの操作）<br><br><t7><span style="font-weight:bold; line-height:4rem;">｢ 現在の研究テーマ ｣</span></t7><br>・ 商品デザインやサービスにおいて、心理量（ある刺激対するヒトが持つイメージ）と物理量（色調や図形など）の関係を研究する。<br>・ 感覚、知覚、認知、感性、などのさまざまな心理作用をもとに多様な人間の心理・生理・行動的なプロセスを明確にする。<br>・ サービスデザインためのUI/UX設計及びデザインに関する研究<br>・ 製品やサービスを長く利用するための愛着との関連<br>・ 自動車販売のオンライン化について新たなCX提案
+            </p></li>
+          </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h3 class="title1">Class Subjects</h3>
+            <div class="box1">
+              <ul>
+                <li><a class="button" href="http://syllabus.sic.shibaura-it.ac.jp/syllabus/2021/dsn/126021.html?y=2021&g=Y00&c=F"><span>インタフェースデザイン</span></a></li>
+                <li><a class="button" href="http://syllabus.sic.shibaura-it.ac.jp/syllabus/2021/dsn/126799.html?y=2021&g=Y00&c=F"><span>情報アーキテクチャ概論</span></a></li>
+                <li><a class="button" href="http://syllabus.sic.shibaura-it.ac.jp/syllabus/2021/dsn/125117.html?y=2021&g=Y00&c=F"><span>コンテンツデザイン</span></a></li>
+                <li><a class="button" href="http://syllabus.sic.shibaura-it.ac.jp/syllabus/2021/dsn/125118.html?y=2021&g=Y00&c=F"><span>コンテンツデザイン演習</span></a></li>
+                <li><a class="button" href="http://syllabus.sic.shibaura-it.ac.jp/syllabus/2021/dsn/126877.html?y=2021&g=Y00&c=F"><span>プロジェクト演習15</span></a></li>
+                <li><a class="button" href="http://syllabus.sic.shibaura-it.ac.jp/syllabus/2021/dsn/127608.html?y=2021&g=Y00&c=F"><span>総合プロジェクト</span></a></li>
+                <li><a class="button" href="http://syllabus.sic.shibaura-it.ac.jp/syllabus/2021/din/126999.html?y=2021&g=400"><span>インタフェースデザイン得論</span></a></li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h3 class="title1">Education</h3>
+            <div class="box1">
+              <ul>
+                <li><span>韓国蔚山大学校デザイン学部産業デザイン学科</span></a></li>
+                <li><span>蔚山大学校情報通信大学院情報デザイン専攻(修士：工学)</span></a></li>
+                <li><span>筑波大学芸術研究科デザイン専攻生産デザイン分野(修士：デザイン学)</span></a></li>
+                <li><span>筑波大学人間総合科学研究科感性認知脳科学専攻(博士：感性科学)</span></a></li>
+                <li><span>アメリカイリノイ大学アーバナ・シャンペーン校　ART & DESIGN 学部　客員教授</span></a></li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h3 class="title1">Affiliated Academic Society</h3>
+            <div class="box1">
+              <ul>
+                <li><span>日本デザイン学会</span></a></li>
+                <li><span>日本感性工学会</span></a></li>
+                <li><span>韓国デザイン学会</span></a></li>
+                <li><span>情報処理学会</span></a></li>
+                <li><span>デザイントレンド学会</span></a></li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <div class="space">
+            <h3 class="title1">Work Experience</h3>
+            <div class="box1">
+              <ul>
+                <li><span>2005.3－2009.5　(株)ビジブルインテリジェンス</span></a></li>
+                 <li><span>2007.4－2009.3　筑波大学人間総合科学研究科ティーチングアシスタント</span></a></li>
+                 <li><span>2007.4－2009.5　筑波大学図書館情報大学支援室技術補助員</span></a></li>
+                 <li><span>2007.4－2008.3　筑波研究学園専門学校情報処理科非常勤講師</span></a></li>
+                 <li><span>2006.4－2007.3　21COE「心を解明する感性科学の推進」RESEARCHアシスタント</span></a></li>
+                 <li><span>2010.4－2013.3　長崎総合科学大学情報学部知能情報学科准教授</span></a></li>
+                 <li><span>2010.4－2013.3　長崎総合科学大学大学院工学研究科修士課程電子情報学専攻准教授</span></a></li>
+                 <li><span>2010.4－2013.3　長崎総合科学大学新技術創成研究所情報技術部門研究員</span></a></li>
+                 <li><span>2013.4－2019.3　芝浦工業大学デザイン工学部デザイン工学科准教授</span></a></li>
+                 <li><span>2019.4－2020.3　アメリカイリノイ大学アーバナ・シャンペーン校　ART & DESIGN 学部　客員教授</span></a></li>
+                 <li><span>2019.4－現<span class="b">在</span>　芝浦工業大学デザイン工学部デザイン工学科　教授</span></a></li>
+              </ul>
+            </div>
+          </div>
+          </section>
+        </li>
+      </ul>
+    </div>
+
+    <div class="area" id="member">
+      <div class="member-contents">
+        <h3 class="member-title">Lab Members</h3>
+      </div>
+      <ul class="slider">
+          <li class="slider-item slider-item01">
+          <div class="year">2022</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Umino Megumi（海野 恵）</span>オノマトペを用いた情報提示による質感認知への影響</a></li>
+            <li class="list-item"><span>Uwajima Yuki（上嶋 優輝) </span>情報表現がユーザーの認知及び負荷に与える影響 〜サムネイルのUI的特徴を中心に〜</a></li>
+            <li class="list-item"><span>Omori Sumire (大森 すみれ) </span>待ち時間の認知における情報提示の有用性について 〜スプラッシュスクリーン活用の試み〜</a></li>
+            <li class="list-item"><span>Saburi Wakana（佐分 わか奈）</span>若者のアルバイト早期離職に対する心理的サポートについて</a></li>
+            <li class="list-item"><span>Zen Ryonna（全 玲奈）</span>オンライン決済における心理的な不安解消に関する研究　〜インタラクションの待ち時間について〜</a></li>
+            <li class="list-item"><span>Tanio Mia (谷尾 美亜) </span>UIエレメントにおける「かわいい」感性の活用について</a></li>
+            <li class="list-item"><span>Furuhashi Yugo（古橋 優吾）</span>Eコマースでの3Dコンフィギュレータの有用性 〜カーソル操作におけるユーザービリティの向上〜</a></li>
+            <li class="list-item"><span>Masuko Minami（益子 美菜実）</span>地域観光の情報発信におけるタッチポイントの検討 〜若者のSNS利用特徴の調査を中心に〜</a></li>
+            <li class="list-item"><span>Matsumoto Kanta（松本 幹大）</span>UIの情報提示の違いがユーザーの心理に及ぼす影響 〜セルフオーダーのスキャナビリティを中心に〜</a></li>
+            <li class="list-item"><span>Watanabe Ami (渡邉 亜美) </span>グローバル展開サービスにおける情報提示の一貫性について</a></li>
+
+          　    </ul>
+          </li>
+          <li class="slider-item slider-item02">
+          <div class="year">2021</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Usami Kai（宇佐美 開）</span>実店舗でのユーザー体験を考慮したCXモデルの提案 〜若者のアパレル店舗での購買行動を中心に〜</a></li>
+            <li class="list-item"><span>Uchiyama Kazuki（内山 勝貴）</span>楽器・作曲アプリのUIにおけるインタラクションに関する研究</a></li>
+            <li class="list-item"><span>Kishida Megumi (岸田 愛生)</span>OMOサービスにおける製品の情報提示方法に関する研究 〜アパレルECサイトの写真レイアウトを中心に〜</a></li>
+            <li class="list-item"><span>Shimura Kotarou（志村 勇太朗）</span>自販機のスマート化による新たなユーザー体験の検討</a></li>
+            <li class="list-item"><span>Suzuki Yuri (鈴木 悠里)</span>デリバリープラットフォームでの利用者間のインタラクションについて 〜飲食店と注文者間の情報提供の方法〜</a></li>
+            <li class="list-item"><span>Takaya Yuta（髙谷 優太）</span>キッチンカー運営においてプラットフォームの役割について 〜食材の仕入れと在庫管理を中心に〜</a></li>
+            <li class="list-item"><span>Tabei Kosuke (田部井　宏介)</span>動的要素の活用による絵文字の感情表現への影響</a></li>
+            <li class="list-item"><span>Tsumura Miho (都村　美帆)</span>知識共有によるデザイナーの倫理意識向上へ〜ダークパターンの現状と認識調査中心に〜</a></li>
+            <li class="list-item"><span>Murata Sorachi (村田　空知)</span>C2Cサービスにおける情報表示がユーザーの感性に与える影響の解明</a></li>
+            <li class="list-item"><span>Park Sanghoon (パク サンフン)（修士論文）</span>オンラインのみ販売において、顧客経験ガイドラインの提案</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item03">
+          <div class="year">2020</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Akiba Misato（秋葉 美怜）</span>異文化間におけるモバイルアプリのUIの違いに関する研究-ライフスタイルの影響を受けて-</a></li>
+            <li class="list-item"><span>Uematsu Daichi（植松 大知）</span>記憶定着に効果的なモーショングラフィックスについての検討</a></li>
+            <li class="list-item"><span>Saito Keisuke (齋藤 圭佑)</span>グループワークにおけるオンラインプリパレーションの有効性向上の検討</a></li>
+            <li class="list-item"><span>Nagasaki Aika（長崎 愛加）</span>オンラインにおける物の質感の認知について</a></li>
+            <li class="list-item"><span>Noguchi Reina (野口 玲奈)</span>若者世代に特化したコインランドリーDX化の検討</a></li>
+            <li class="list-item"><span>Muto Takumi（武藤 拓海）</span>スマートペイメントの購買行動特徴に基づく決済プロセスの提案</a></li>
+            <li class="list-item"><span>Yamanaka Miyo (山中 美葉)</span>読譜を習得するための楽譜表示方法を含めた工夫の検討</a></li>
+            <li class="list-item"><span>Anzai Ryusei (安西 竜晟)</span>活動意志の違いによる運動データの活⽤に関する研究</a></li>
+            <li class="list-item"><span>Horikawa Sakurako (堀川 桜子)</span>生産者と消費者を繋ぐ新しい販売フラットフォームの考案-気象データを中心として-</a></li>
+            <li class="list-item"><span>Yuzakino Fumiya (湯崎野 郁也)</span>オンライン授業におけるより良い休憩の取り方に関する研究</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item04">
+          <div class="year">2019</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Sato Keitaro（佐藤 圭太郎）(修士論文）</span>動作音がユーザーと製品間のインタラクションに与える影響</a></li>
+            <li class="list-item"><span>Kim Shinheon（金 信憲）(修士論文）</span>バス案内の統合システムにおける検索方法の提案　-熊本県バス案内の統合システムを中⼼として-</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item05">
+          <div class="year">2018</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Kida Shunsuke（木田 峻介）</span>消費者間で行う不用品を活用したものづくりを支援するサービスの提案</a></li>
+            <li class="list-item"><span>Nagura Kousuke（名倉 光亮）</span>フィットネスに集中するための動的な視覚表現の研究</a></li>
+            <li class="list-item"><span>Niiya Kentaro (新谷 賢汰朗)</span>運転時における車載タッチパネルの操作性検討</a></li>
+            <li class="list-item"><span>Hattori Masahiro（服部 将大）</span>SNS上の動画サムネイルの提示方法に関する研究</a></li>
+            <li class="list-item"><span>Hattori Mana (服部 愛)</span>バス停における乗り場案内情報の改善〜 川崎駅のサイネージを中心に 〜</a></li>
+            <li class="list-item"><span>Chiakio Hatazaki（畑﨑 千晶）</span>リクルートパンプス購入のためのサイズ感の情報表示の提案</a></li>
+            <li class="list-item"><span>Fukushima Nao (福嶋 菜緒)</span>カメラアプリのシャッターUIにおけるユーザビリティの向上</a></li>
+            <li class="list-item"><span>Mizuta Reo (水田 怜央)</span>シェアサイクルのユーザビリティ向上のための研究〜利用方法における情報表示を中心に〜</a></li>
+            <li class="list-item"><span>Yokoi Marie (横井 万利江)</span>新たな学校制服の在り方についての研究</a></li>
+            <li class="list-item"><span>Choi  Yeongchae (崔 映彩)（修士論文）</span>ユーザー役割の違いによる情報認識の変化に関する研究</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item06">
+          <div class="year">2017</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Inoue Manatsu（井上 真夏）</span>ごみの戸別収集における作業効率向上のためのモビリティ提案</a></li>
+            <li class="list-item"><span>Uehara Natsuki（上原 菜月）</span>デザイン演習授業におけるモデル作成の支援に関する研究</a></li>
+            <li class="list-item"><span>Kawamura Nahoko (河村 奈帆子)</span>日用品の購入特徴を用いた買い物サービスの提案</a></li>
+            <li class="list-item"><span>Kambe Nao（神戸 菜緒）</span>高速道路の二次事故を防止するための支援方法に関する研究</a></li>
+            <li class="list-item"><span>Gyotoku Gosuke (行德 豪亮)</span>Webサービスにおける印刷物の情報伝達に関する研究</a></li>
+            <li class="list-item"><span>Sato Keitaro（佐藤 圭太郎）</span>スピーカーにおける管の形状による音響に及ぼす影響</a></li>
+            <li class="list-item"><span>Takeda Rikuto (武田 陸登)</span>GUIのメンタルモデルがユーザビリティに与える影響</a></li>
+            <li class="list-item"><span>Tabuchi Tsubasa (田渕 翼)</span>患者の入院生活におけるパーソナルスペースの改善-AYA世代のためのオーバーテーブルの提案-</a></li>
+            <li class="list-item"><span>Naemura Minami (苗村 美波)</span>子どもの創造性を刺激するプロダクトの提案</a></li>
+            <li class="list-item"><span>Narui Yuka (成井 佑佳)</span>患者の入院生活支援のための情報活用に関する研究-AYA世代がん患者のためのアプリケーションの提案</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item07">
+          <div class="year">2016</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Asada Yuki（浅田 優希）</span>ネット印刷サービスにおける質感表現の研究 ‐紙媒体の印象評価を中心として‐</a></li>
+            <li class="list-item"><span>Arayama Riho（荒山 莉穂）</span>ワークショップにおける参加者の情報管理方法と学習効果の改善 -グローバルPBLの調査による検証-</a></li>
+            <li class="list-item"><span>Inoue Kosuke（井上 孝介）</span>モビリティにおける認知を促すための光の点滅パターン検討</a></li>
+            <li class="list-item"><span>Karasumaru Megumi（烏丸 愛美）</span>生活習慣病のための 食品の情報表示に関する研究</a></li>
+            <li class="list-item"><span>Sekine Tomomi（関根 智美）</span>若年男性の製品選択における感性価値としての「かわいい」の働き</a></li>
+            <li class="list-item"><span>Nakano shota（中野 翔太）</span>自転車の報知音における「快・不快」要素の考察</a></li>
+            <li class="list-item"><span>Hirohashi Takanori（廣橋 孝紀）</span>EV充電スタンドにおけるユーザビリティの検討</a></li>
+            <li class="list-item"><span>Matsuoka Sonoko（松岡 苑子）</span>電子書籍のモーショングラフィックスの有無による印象の違い</a></li>
+            <li class="list-item"><span>Yanagida Yuho（柳田 優穂）</span>ユーザー経験（UX）に基づく音楽の楽しみ方の提案</a></li>
+            <li class="list-item"><span>Yahiro Satoshi（八尋 誠史）</span>ユーザーの期待感調査に基づくSVODサービスのUI設計について</a></li>
+            <li class="list-item"><span>Yanamoto Shin（柳本 伸）</span>SPAブランドにおける消費者の行動観察に基づいたディスプレイ方法の検討</a></li>
+            <li class="list-item"><span>Shibata Naoya（柴田 直也）(修士論文）</span>ビジネス向け製品におけるペアリング操作のUIに関する研究</a></li>
+            <li class="list-item"><span>Matsuo Toshiki（松尾 俊基）(修士論文）</span>直感的なインタラクションのためのUIデザイン研究 -画像編集ツールにおけるスライダーインタフェースを中心に-</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item08">
+          <div class="year">2015</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Ito Yu（伊東 優）</span>ユニバーシティ・アイデンティティ戦略における広報グッズの提案-芝浦工業大学の事例を中心として-</a></li>
+            <li class="list-item"><span>Shibata Naoya（柴田 直也）</span>製品のインタフェースが「飽き」へ及ぼす影響-ウェアラブルデバイスの操作画面を中心に-</a></li>
+            <li class="list-item"><span>Suziki Kengo (鈴木 健吾)</span>IoT製品の調査によるインタラクションデザインの試み</a></li>
+            <li class="list-item"><span>Nemoto Midori（根本 緑）</span>外国人向け食品表示に関する研究</a></li>
+            <li class="list-item"><span>Hato Maho (羽藤 真帆)</span>保育活動におけるコミュニケーションツールの提案</a></li>
+            <li class="list-item"><span>Matsuo Toshiki（松尾 俊基）</span>Webデザインにおける視覚情報の一貫性について-大学Webサイトのレスポンシブ化を中心に-</a></li>
+            <li class="list-item"><span>Yamada Kenta (山田 健太)</span>高齢者の着座・立ち上がり動作を補助する椅子の提案</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item09">
+          <div class="year">2014</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Daijyou Ayaka (大城 綾香)</span>店舗でのユーザーの購買行動に合わせた情報発信の提案</a></li>
+            <li class="list-item"><span>Kato Yuta (加藤 裕太)</span>高齢者のアクティブな活動を支援するための生活情報の視覚化</a></li>
+            <li class="list-item"><span>Karaki Yoshiho (唐木 善帆)</span>POP広告を用いた小売店舗の活性化-個人経営の書店におけるコミュニケーションツールの提案-</a></li>
+            <li class="list-item"><span>Kondo Harumi (近藤 春海)</span>操作音の有無がタブレット端末の文字入力操作に及ぼす影響</a></li>
+            <li class="list-item"><span>Hukutomi Yuka (福富 ゆか)</span>育児活動を支援するための情報共有対策-連絡帳を用いた新たなコミュニケーションツールの提案-</a></li>
+            <li class="list-item"><span>Mayama Yuka (間山 優夏)</span>贈り手の記憶行為に着目したギフトサービスの提案</a></li>
+            <li class="list-item"><span>Wakabayashi Nakaba（若林 央）</span>農業における若者の意識向上のための情報共有</a></li>
+        　</ul>
+          </li>
+          <li class="slider-item slider-item10">
+          <div class="year">2013</div>
+          <ul class="menu-list">
+            <li class="list-item"><span>Ugajin Ayaka（宇賀神 綾花）</span>自転車を利用した観光の楽しみ方に関する研究</a></li>
+            <li class="list-item"><span>Okada Yusuke（岡田 祐典）</span>感性価値に着目したフォトスタジオのサービス考察</a></li>
+            <li class="list-item"><span>Kanou Yuri（狩野 友理）</span>アパレルネット通販におけるユーザー参加型サービス</a></li>
+            <li class="list-item"><span>Sugawara Tosiaki（菅原 利晃）</span>高齢者の購買行動に着目した買い物支援サービスの提案</a></li>
+            <li class="list-item"><span>Soeda Yusuke（添田 悠央）</span>タッチインタラクションにおける視覚的要素が及ぼす影響-ドラッグ操作する際の操作感を中心に-</a></li>
+            <li class="list-item"><span>Someya Takumi（染谷 拓海）</span>ネットバンキングとモバイルバンキングの比較に関する研究　ユーザーエクスペリエンスデザインのための試み</a></li>
+            <li class="list-item"><span>Takahashi Yurie（高橋 由利江）</span>電子書籍におけるUD視点からのデザイン研究-高齢者のためのデジタルデバイスの提案-</a></li>
+            <li class="list-item"><span>Choi Jungsoo（チェジョンス）</span>韓国の環境を考慮した除湿機の提案　ユーザーの調査を中心に</a></li>
+        　</ul>
+          </li>
+        </ul>
+      </div>
+
+    <div class="area" id="career">
+      <div class="career-contents">
+        <h3 class="career-title">Career</h3>
+      </div>
+      <div class="sub-title-c"><span>卒業生の勤め先</span>OB・OGの多くが大手企業でUI/UXデザイナーやプロダクトデザイナー、企画担当者として活躍しています</div>
+      <div class="link_contents_on">
+        <ul>
+          <a class="button" href="http://hr.yahoo.co.jp/" target="_blank"><span>・Yahoo! Japan：9名</span></a><a class="button" href="https://www.justsystems.com/jp/" target="_blank"><span>・JUST SYSTEM：4名</span></a>
+			    <a class="button" href="https://www.gmo.media" target="_blank"><span>・GMOメディア：3名</span></a><a class="button" href="https://www.kddi.com" target="_blank"><span>・KDDI株式会社</span></a>
+          <a class="button" href="https://www.konicaminolta.com/jp-ja/index.html" target="_blank"><span>・コニカミノルタ</span></a><a class="button" href="https://www2.deloitte.com/jp/ja.html" target="_blank"><span>・デロイト トウシュ トーマツ</span></a>
+          <a class="button" href="https://www.infocom.co.jp/ja/index.html" target="_blank"><span>・infocom</span></a><a class="button" href="https://www.fujitsu.com/jp/" target="_blank"><span>・株式会社富士通</span></a>
+          <a class="button" href="http://www.sony.co.jp/SonyInfo/Jobs/newgrads/?j-short=newgrads" target="_blank"><span>・SONY</span></a><a class="button" href="https://www.panasonic.com/jp/home.html" target="_blank"><span>・パナソニック株式会社</span></a></li>
+          <a class="button" href="https://www.irisohyama.co.jp" target="_blank"><span>・株式会社アイリスオヤマ</span></a><a class="button" href="https://www.ricoh.co.jp" target="_blank"><span>・株式会社リコー</span></a>
+          <a class="button" href="https://www.daikin.co.jp" target="_blank"><span>・ダイキン工業株式会社</span></a><a class="button" href="http://www.gamefreak.co.jp/recruit/" target="_blank"><span>・GAME FREAK</span></a></li>
+          <a class="button" href="https://www.cyberagent.co.jp" target="_blank"><span>・株式会社サイバーエージェント：2名</span></a><a class="button" href="https://www.dip-net.co.jp" target="_blank"><span>・株式会社DIP</span></a></li>
+          <a class="button" href="http://www.h-products.co.jp" target="_blank"><span>・博報堂プロダクツ</span></a><a class="button" href="http://dena.com/jp/recruit/" target="_blank"><span>・DeNA</span></a><a class="button" href="http://www.fujixerox.co.jp/tkx/" target="_blank"><span>・富士ゼロックス東京</span></a>
+          <a class="button" href="http://starts-pub.jp" target="_blank"><span>・スターツ出版株式会社</span></a><a class="button" href="https://www.hitachi-ife.co.jp" target="_blank"><span>・日立インフォメーションエンジニアリング</span></a>
+          <a class="button" href="http://gyao.yahoo.co.jp/" target="_blank"><span>・Yahoo! GYAO</span></a><a class="button" href="https://www.navitime.co.jp/" target="_blank"><span>・NAVITIME</span></a>
+          <a class="button" href="https://www.nttdocomo.co.jp" target="_blank"><span>・NTTドコモ：2名</span></a><a class="button" href="https://www.ntt.com/index.html" target="_blank"><span>・NTTコミュニケーションズ</span></a>
+          <a class="button" href="https://www.nttdata.com/jp/ja/" target="_blank"><span>・NTTデータ</span></a><a class="button" href="https://www.nttdata-getronics.co.jp" target="_blank"><span>・NTTデータジェトロニクス</span></a>
+          <a class="button" href="https://www.septeni-holdings.co.jp" target="_blank"><span>・セプテーニ・ホールディングス</span></a><a class="button" href="https://www.bizreach.jp" target="_blank"><span>・ビズリーチ</span></a>
+          <a class="button" href="https:/http://www.val.co.jp" target="_blank"><span>・ヴァル研究所</span></a><a class="button" href="http://www.suntory.co.jp/" target="_blank"><span>・SANTORY</span></a>
+          <a class="button" href="http://www.francfranc.com/shop/default.aspx" target="_blank"><span>・Francfranc</span></a><a class="button" href="http://www.kawajun.co.jp" target="_blank"><span>・KAWAJUN</span></a>
+          <a class="button" href="http://www.7andinm.co.jp/" target="_blank"><span>・セブン＆アイ・ネットメディア</span></a><a class="button" href="https://www.mitsue.co.jp/" target="_blank"><span>・ミツエーリンクス </span></a>
+          <a class="button" href="http://zozo.jp" target="_blank"><span>・ZOZOTOWN</span></a><a class="button" href="http://www.joyobank.co.jp/" target="_blank"><span>・常陽銀行</span></a><a class="button" href="https://www.ibm.com/jp-ja" target="_blank"><span>・日本IBM</span></a>
+          <a class="button" href="https://www.recruit.co.jp/" target="_blank"><span>・リクルート</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="area" id="dataroom">
+      <div class="data-contents">
+        <h3 class="data-title">Dataroom</h3>
+      </div>
+      <ul class="accordion-area">
+      <li>
+          <section>
+            <h3 class="title5">gPBL(Global Project Based Learning)の成果物</h3>
+            <div class="box2">
+              <ul>
+                <li><a class="button" href="./data/KMU-SIT2021.pdf" target="_blank"><span>2021年2月　KMU-SIT Design Workshop in Tokyo(韓国国民大学とオンラインデザインワークショップ）</span></a></li>
+                <li><a class="button" href="./data/KMU-SIT2020.pdf" target="_blank"><span>2020年2月　KMU-SIT Design Workshop in Tokyo</span></a></li>
+                <li><a class="button" href="./data/KMU-SIT2019.pdf" target="_blank"><span>2019年2月　KMU-SIT Design Workshop in Tokyo</span></a></li>
+                <li><a class="button" href="./data/KMU-SIT2018.pdf" target="_blank"><span>2018年2月　KMU-SIT Design Workshop in Tokyo</span></a></li>
+                <li><a class="button" href="./data/KMU-SIT2017.pdf" target="_blank"><span>2017年2月　KMU-SIT Design Workshop in Tokyo</a></li>
+      			    <li><a class="button" href="./data/2016gpbl yearbook.pdf" target="_blank"><span>2016年8月　Asia 5大学デザインワークショック</a></li>
+              </ul>
+          </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h3 class="title5">国内活動学会</h3>
+            <div class="box2">
+              <ul>
+                <li><a class="button" href="http://jssd.jp/" target="_blank"><span>日本デザイン学会</span></a></li>
+                <li><a class="button" href="http://www.jske.org/" target="_blank"><span>日本感性工学会</span></a></li>
+                <li><a class="button" href="http://www.janphs.jp/" target="_blank"><span>日本福祉心理学会</span></a></li>
+                <li><a class="button" href="http://www.color-science.jp/" target="_blank"><span>日本色彩学会</span></a></li>
+                <li><a class="button" href="http://www.ipsj.or.jp/" target="_blank"><span>情報処理学会</span></a></li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h3 class="title5">海外活動学会&amp;学術大会</h3>
+            <div class="box2">
+              <ul>
+                <li><a class="button" href="https://www.iasdr2021.org" target="_blank"><span>International Association of Societies of Design Research (IASDR)</span></a></li>
+                 <li><a class="button" href="https://ahfe.org/" target="_blank"><span>International Conference on Applied Human Factors and Ergonomics (AHFE)</span></a></li>
+                <li><a class="button" href="http://www.designandemotion.org/" target="_blank"><span>Design &amp; Emotion Society</span></a></li>
+                 <li><a class="button" href="https://www.keer.org" target="_blank"><span>International Kansei Engineering and Emotion Research Conference(KEER)</span></a></li>
+                <li><a class="button" href="http://2022.hci.international" target="_blank"><span>International conference of human-computer interaction(HCI)</span></a></li>
+                <li><a class="button" href="http://www.design-science.or.kr/eng_index.asp" target="_blank"><span>韓国デザイン学会</span></a></li>
+                <li><a class="button" href="http://www.esk.or.kr/" target="_blank"><span>韓国人間工学会</span></a></li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h3 class="title5">Competition of design</h3>
+            <div class="box2">
+              <ul>
+                <li><a class="button" href="http://compe.japandesign.ne.jp/"><span>デザインコンテスト情報</span></a></li>
+                <li><a class="button" href="http://www.red-dot.sg/"><span>Red dot Award : Design Concept</span></a></li>
+                <li><a class="button" href="http://ifworlddesignguide.com/"><span>iF Design Award</span></a></li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <div class="space">
+            <h3 class="title5">Official approval</h3>
+            <div class="box2">
+              <ul>
+                <li><a class="button" href="https://www.cgarts.or.jp/"><span>CG-ARTS協会</span></a></li>
+              </ul>
+            </div>
+          </div>
+          </section>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <div class="footericon">
+          <div class="related">RELATER LINKS</div>
+        <div class="icon">
+          <a href="https://twitter.com/sitinfodesign1"><i class="fa fa-fw fa-2x fa-twitter"></i></a>
+          <a href="https://www.facebook.com/sitinfodesign/?fref=ts"><i class="fa fa-fw fa-2x fa-facebook"></i></a>
+          <a href="https://www.instagram.com/sit_yanglab/"><i class="fa fa-fw fa-2x fa-instagram"></i></a>
+          <a href="https://www.shibaura-it.ac.jp/"><i class="fa fa-fw fa-2x fa-graduation-cap"></i></a>
+        </div>
+        <div class="footer_text">
+          <p class="kansei"><span>Kansei</span> Interaction Design Lab .</p>
+          <p class="reserved"> <br>©2024 Kansei Interaction Design Lab. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./java/script.js"></script>
+
+  </body>
+
+</html>
